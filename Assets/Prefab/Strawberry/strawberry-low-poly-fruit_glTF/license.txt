@@ -1,0 +1,11 @@
+Model Information:
+* title:	Strawberry low poly fruit
+* source:	https://sketchfab.com/3d-models/strawberry-low-poly-fruit-88afb31d1e5e4b31af2777e31ace429c
+* author:	DidE (https://sketchfab.com/DidE)
+
+Model License:
+* license type:	CC-BY-4.0 (http://creativecommons.org/licenses/by/4.0/)
+* requirements:	Author must be credited. Commercial use is allowed.
+
+If you use this 3D model in your project be sure to copy paste this credit wherever you share it:
+This work is based on "Strawberry low poly fruit" (https://sketchfab.com/3d-models/strawberry-low-poly-fruit-88afb31d1e5e4b31af2777e31ace429c) by DidE (https://sketchfab.com/DidE) licensed under CC-BY-4.0 (http://creativecommons.org/licenses/by/4.0/)
