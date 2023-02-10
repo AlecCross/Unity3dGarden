@@ -25,7 +25,8 @@ public class CameraController : MonoBehaviour
 
     void Update()
     {
-        lastMouse = Input.mousePosition - lastMouse;
+        if (Input.GetMouseButton(1)){
+            lastMouse = Input.mousePosition - lastMouse;
         lastMouse = new Vector3(-lastMouse.y * camSens, lastMouse.x * camSens, 0);
         lastMouse = new Vector3(transform.eulerAngles.x + lastMouse.x, transform.eulerAngles.y + lastMouse.y, 0);
         transform.eulerAngles = lastMouse;
@@ -62,12 +63,19 @@ public class CameraController : MonoBehaviour
         {
             transform.Translate(p);
         }
+        }
 
     }
 
     private Vector3 GetBaseInput()
     { //returns the basic values, if it's 0 than it's not active.
         Vector3 p_Velocity = new Vector3();
+        // if (Input.GetMouseButton(0))
+        // Debug.Log("Pressed primary button 0.");
+        // if (Input.GetMouseButton(1))
+        // Debug.Log("Pressed primary button 1.");
+        // if (Input.GetMouseButton(2))
+        // Debug.Log("Pressed primary button 2.");
         if (Input.GetKey(KeyCode.W))
         {
             p_Velocity += new Vector3(0, 0, 1);
