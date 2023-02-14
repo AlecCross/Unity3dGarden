@@ -23,24 +23,20 @@ public class CameraController : MonoBehaviour
     private Vector3 lastMouse = new Vector3(255, 255, 255); //kind of in the middle of the screen, rather than at the top (play)
     private float totalRun = 1.0f;
     Vector3[] camPoints = {
-        //new Vector3(0,110,0),
-        new Vector3(60,100,70),
-        //new Vector3(60,40,100),
-        new Vector3(-60,-100,-70),
-         //new Vector3(0,110,0),
-        new Vector3(-60,90,60),
-         //new Vector3(-60,50,90),
-        new Vector3(60,-90,-60),
-         //new Vector3(0,110,0),
-        new Vector3(50,90,75),
-         //new Vector3(50,35,90),
-        new Vector3(-50,-90,-75),
-         //new Vector3(0,110,0),
-        new Vector3(43,100,75),
-         //new Vector3(43,35,100),
-        new Vector3(-43,-100,-75),
-         //new Vector3(0,110,0),
+        // reser new Vector3(-26,15,-243),
+        // new Vector3(-26,15,-98),
+        new Vector3(0,0,3),
+        new Vector3(0,0,3),
+        new Vector3(0,0,3),
+        new Vector3(0,0,3),
+        new Vector3(0,0,3),
+        new Vector3(0,0,3),
+        new Vector3(0,0,3),
+        new Vector3(0,0,3),
+        // new Vector3(-26,15,145),
         };
+    Vector3 revertCameraPosition = new Vector3(-26, 15, 145);
+    Vector3 resetCameraPosition = new Vector3(0,0,-243);
     // Vector3[] camRotatePoints = {
     //     // new Vector3(90,0,0),
     //     new Vector3(70,180,0),
@@ -107,6 +103,9 @@ public class CameraController : MonoBehaviour
                 // Camera.main.transform.Rotate(camRotatePoints[camPointCounter]);
                 camPointCounter++;
                 Debug.Log(camPointCounter);
+                Debug.Log(Camera.main.transform.position);
+            if(Camera.main.transform.position==revertCameraPosition)
+                Camera.main.transform.Translate(resetCameraPosition);
             }
             if(camPointCounter==8)
             {
@@ -123,12 +122,6 @@ public class CameraController : MonoBehaviour
     private Vector3 GetBaseInput()
     { //returns the basic values, if it's 0 than it's not active.
         Vector3 p_Velocity = new Vector3();
-        // if (Input.GetMouseButton(0))
-        // Debug.Log("Pressed primary button 0.");
-        // if (Input.GetMouseButton(1))
-        // Debug.Log("Pressed primary button 1.");
-        // if (Input.GetMouseButton(2))
-        // Debug.Log("Pressed primary button 2.");
         if (Input.GetKey(KeyCode.W))
         {
             p_Velocity += new Vector3(0, 0, 1);
